@@ -13,9 +13,9 @@ import { CostumMissingTranslationHandler } from './custom-missing-translation-ha
           useFactory: CustomTranslateLoader,
           deps: [HttpClient],
       },
-      missingTranslationHandler: { 
-        provide: MissingTranslationHandler, 
-        useClass: CostumMissingTranslationHandler, 
+      missingTranslationHandler: {
+        provide: MissingTranslationHandler,
+        useClass: CostumMissingTranslationHandler,
       },
     }),
   ]

@@ -4,7 +4,7 @@ export class CostumMissingTranslationHandler implements MissingTranslationHandle
     /**
      * handle missing translations
      */
-    public handle(params: MissingTranslationHandlerParams) {
+    public handle(params: MissingTranslationHandlerParams): string {
         const errorRegEx = /errors\./;
         if (params.key.match(errorRegEx) !== null) {
             return params.translateService.instant('errors.UnknownError');

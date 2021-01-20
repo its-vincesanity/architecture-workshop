@@ -1,0 +1,17 @@
+<h2>User Profile</h2>
+
+<section>
+    <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" [(ngModel)]="user.firstName" (keyup)="validateForm()">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last Name" [(ngModel)]="user.lastName" (keyup)="validateForm()">
+    </mat-form-field>
+</section>
+
+<section>
+    <button mat-raised-button [disabled]="!hasUserChanged" (click)="reset()">Reset</button>
+    <button mat-raised-button [disabled]="!hasUserChanged || !isFormValid" (click)="updateUser()" color="primary">Save</button>    
+</section>

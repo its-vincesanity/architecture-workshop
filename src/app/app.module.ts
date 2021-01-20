@@ -7,7 +7,8 @@ import { APP_ROUTES } from './app.routes';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationModule } from './navigation/navigation.module';
-import { HeaderComponent } from './navigation/header/header.component';
+import { WelcomeModule } from './features/welcome/welcome.module';
+import { UserProfileModule } from './features/user-profile/user-profile.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,10 @@ import { HeaderComponent } from './navigation/header/header.component';
     BrowserAnimationsModule,
     RouterModule.forRoot(APP_ROUTES),
     CoreModule,
+
     NavigationModule,
+    WelcomeModule,
+    UserProfileModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
