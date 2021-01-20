@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MissingTranslationHandler, TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { CustomTranslateLoader } from './custom-translate-loader';
 import { HttpClient } from '@angular/common/http';
@@ -8,7 +7,6 @@ import { CostumMissingTranslationHandler } from './custom-missing-translation-ha
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
