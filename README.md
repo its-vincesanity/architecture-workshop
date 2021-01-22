@@ -4,11 +4,11 @@ This workshop should provide an easy overview how to create an enterprise angula
 
 # Content
 - [Changelog](./CHANGELOG.md)
-- [App Module](./src/app/README.md)
-- [Navigation Module](./src/app/navigation/README.md)
-- [Core Module](./src/app/core/README.md)
-- [Features](./src/app/features/README.md)
-  - [User Profile](./src/app/features/user-profile/README.md)
+- [App Module](./app/src/app/README.md)
+- [Navigation Module](./app/src/app/navigation/README.md)
+- [Core Module](./app/src/app/core/README.md)
+- [Features](./app/src/app/features/README.md)
+  - [User Profile](./app/src/app/features/user-profile/README.md)
 
 # Run Demo
 
