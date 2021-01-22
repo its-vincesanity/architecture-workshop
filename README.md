@@ -10,4 +10,25 @@ This workshop should provide an easy overview how to create an enterprise angula
 - [Features](./src/app/features/README.md)
   - [User Profile](./src/app/features/user-profile/README.md)
 
+# Run Demo
+
+## Init
+```bash
+$ npm run init
+```
+
+## Run App
+```bash
+$ npm run start:app
+```
+
+## Run Mock Backend
+```bash
+$ npm run start:backend
+```
+
+## Set Version
+```bash
+$ VERSION=1.0.0 npm run set-version
+```
 

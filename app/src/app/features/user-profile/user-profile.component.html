@@ -1,0 +1,21 @@
+<h2>User Profile</h2>
+
+<mat-spinner *ngIf="loading"></mat-spinner>
+
+<app-something-went-wrong *ngIf="!loading && error"></app-something-went-wrong>
+
+<section *ngIf="!loading && !error">
+    <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" [(ngModel)]="currentUser.firstName" (keyup)="validateForm()">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last Name" [(ngModel)]="currentUser.lastName" (keyup)="validateForm()">
+    </mat-form-field>
+</section>
+
+<section *ngIf="!loading && !error">
+    <button mat-raised-button [disabled]="!hasUserChanged" (click)="reset()">Reset</button>
+    <button mat-raised-button [disabled]="!hasUserChanged || !isFormValid" (click)="updateUser()" color="primary">Save</button>    
+</section>
