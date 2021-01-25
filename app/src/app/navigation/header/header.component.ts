@@ -1,8 +1,8 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, Inject, OnInit } from '@angular/core';
 import { APP_CONFIG } from 'src/app/app.config';
-import { IUser } from 'src/app/core/services/user/user.interface';
 import { UserService } from 'src/app/core/services/user/user.service';
+import { IUser } from '../../../../../api/user/user.interface';
 import { HEADER_CONSTANTS } from './header.constants';
 
 @Component({
@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  private setCurrentUser() {
+  private setCurrentUser(): void {
     this.userService.getCurrentUser().subscribe(response => {
       this.user = response;
     });

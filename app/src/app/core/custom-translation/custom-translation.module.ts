@@ -8,6 +8,7 @@ import { CostumMissingTranslationHandler } from './custom-missing-translation-ha
   declarations: [],
   imports: [
     TranslateModule.forRoot({
+      defaultLanguage: 'de',
       loader: {
           provide: TranslateLoader,
           useFactory: CustomTranslateLoader,
@@ -18,6 +19,7 @@ import { CostumMissingTranslationHandler } from './custom-missing-translation-ha
         useClass: CostumMissingTranslationHandler,
       },
     }),
-  ]
+  ],
+  exports: [TranslateModule]
 })
 export class CustomTranslationModule { }

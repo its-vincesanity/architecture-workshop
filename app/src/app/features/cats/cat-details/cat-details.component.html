@@ -1,0 +1,36 @@
+<mat-toolbar>
+    <h2>
+        {{'cats.titles.details' | translate}}
+    </h2>
+    <div class="spacer"></div>
+    <button mat-raised-button color="primary" [routerLink]="['..']">
+        <mat-icon>keyboard_backspace</mat-icon> {{'common.back' | translate}}
+    </button>
+</mat-toolbar>
+
+<app-something-went-wrong *ngIf="!loading && error"></app-something-went-wrong>
+
+<app-loading *ngIf="loading"></app-loading>
+
+<mat-card class="spacing-top" *ngIf="!loading && !error">
+    <mat-card-header>
+        <mat-card-title>{{currentCat.name}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <section>
+            <strong>{{'cats.age' | translate}}:</strong> {{currentCat.age}}
+        </section>
+        <section>
+            <strong>{{'cats.housebroken' | translate}}:</strong>
+            &nbsp;
+            <mat-icon class="mat-icon-sm">
+                {{currentCat.housebroken === true ? 'done' : 'remove'}}
+            </mat-icon>
+        </section>
+    </mat-card-content>
+
+    <img *ngIf="currentCat.profilePictureUrl !== null" mat-card-image [src]="currentCat.profilePictureUrl">
+    <img *ngIf="currentCat.profilePictureUrl === null" mat-card-image src="https://via.placeholder.com/300x300?text=Has+no+profile+picture">
+    
+</mat-card>

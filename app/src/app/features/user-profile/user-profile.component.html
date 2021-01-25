@@ -1,21 +1,31 @@
-<h2>User Profile</h2>
-
-<mat-spinner *ngIf="loading"></mat-spinner>
+<h2>
+    {{'user_profile.title' | translate}}
+</h2>
 
 <app-something-went-wrong *ngIf="!loading && error"></app-something-went-wrong>
 
+<app-loading *ngIf="loading"></app-loading>
+
 <section *ngIf="!loading && !error">
     <mat-form-field appearance="outline">
-        <mat-label>First Name</mat-label>
-        <input matInput placeholder="First Name" [(ngModel)]="currentUser.firstName" (keyup)="validateForm()">
+        <mat-label>
+            {{'user_profile.first_name' | translate}}
+        </mat-label>
+        <input matInput [placeholder]="'user_profile.first_name' | translate" [(ngModel)]="currentUser.firstName" [minlength]="MINIMUM_INPUT_LENGTH" (keyup)="validateForm()">
     </mat-form-field>
     <mat-form-field appearance="outline">
-        <mat-label>Last Name</mat-label>
-        <input matInput placeholder="Last Name" [(ngModel)]="currentUser.lastName" (keyup)="validateForm()">
+        <mat-label>
+            {{'user_profile.last_name' | translate}}
+        </mat-label>
+        <input matInput [placeholder]="'user_profile.last_name' | translate" [(ngModel)]="currentUser.lastName" [minlength]="MINIMUM_INPUT_LENGTH" (keyup)="validateForm()">
     </mat-form-field>
 </section>
 
 <section *ngIf="!loading && !error">
-    <button mat-raised-button [disabled]="!hasUserChanged" (click)="reset()">Reset</button>
-    <button mat-raised-button [disabled]="!hasUserChanged || !isFormValid" (click)="updateUser()" color="primary">Save</button>    
+    <button mat-raised-button [disabled]="!hasUserChanged" (click)="reset()">
+        {{'common.reset' | translate}}
+    </button>
+    <button mat-raised-button [disabled]="!hasUserChanged || !isFormValid" (click)="updateUser()" color="primary">
+        {{'common.save' | translate}}
+    </button>    
 </section>

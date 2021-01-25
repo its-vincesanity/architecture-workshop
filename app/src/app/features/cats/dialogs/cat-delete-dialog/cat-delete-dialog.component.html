@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>{{'cats.delete' | translate}}</h2>
+<mat-dialog-content class="content">
+    <p>
+        <strong>{{cat.name}}</strong>
+    </p>
+    <p>
+        {{'cats.delete_warn_info' | translate}}
+    </p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button (click)="close()" color="primary">
+        {{'common.cancel' | translate}}
+    </button>
+    <button mat-raised-button (click)="delete()" color="warn">
+        {{'common.delete' | translate}}
+    </button>
+</mat-dialog-actions>

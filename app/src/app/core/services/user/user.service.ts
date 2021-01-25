@@ -3,14 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { APP_CONFIG } from 'src/app/app.config';
-import { IUser } from './user.interface';
+import { IUser } from '../../../../../../api/user/user.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private user: IUser;
   public $update: Subject<IUser> = new Subject();
 
   private backendUrl = APP_CONFIG.backend;
@@ -23,11 +22,11 @@ export class UserService {
     return this.http.get<IUser>(`${this.backendUrl}/user`);
   }
 
-  public updateUser(user: IUser) {
+  public updateUser(currentUser: IUser): Observable<IUser> {
     return this.http
-      .post<IUser>(`${this.backendUrl}/user`, user)
+      .post<IUser>(`${this.backendUrl}/user`, currentUser)
       .pipe(
         tap((user: IUser) => this.$update.next(user))
-      )
+      );
   }
 }

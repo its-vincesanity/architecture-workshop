@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>{{'cats.add' | translate}}</h2>
+<mat-dialog-content class="content">
+    <section>
+        <mat-form-field appearance="outline">
+            <mat-label>{{'cats.name' | translate}}</mat-label>
+            <input matInput [placeholder]="'cats.name' | translate" [(ngModel)]="newCat.name" cdkFocusInitial>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>{{'cats.age' | translate}}</mat-label>
+            <input matInput [placeholder]="'cats.age' | translate" type="number" min="1" max="20" [(ngModel)]="newCat.age" (keyup)="validateAge()">
+        </mat-form-field>
+    </section>
+    <section>
+        <mat-slide-toggle [(ngModel)]="newCat.housebroken" labelPosition="before">
+            {{'cats.housebroken' | translate}}
+        </mat-slide-toggle>
+    </section>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button (click)="close()">{{'common.cancel' | translate}}</button>
+    <button mat-raised-button (click)="add()" color="primary">{{'common.add' | translate}}</button>
+</mat-dialog-actions>

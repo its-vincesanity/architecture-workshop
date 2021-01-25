@@ -1,0 +1,34 @@
+{
+    "common": {
+        "add": "Hinzufügen",
+        "save": "Speichern",
+        "cancel": "Abbrechen",
+        "edit": "Bearbeiten",
+        "delete": "Löschen",
+        "back": "Zurück",
+        "reset": "Zurücksetzen",
+        "something_went_wrong": "Irgendetwas ist schiefgegangen. Bitte versuchen Sie es später noch ein mal."
+    },
+    "units": {
+        "year": "Jahr",
+        "years": "Jahre"
+    },
+    "user_profile": {
+        "title": "Nutzerprofil",
+        "first_name": "Vorname",
+        "last_name": "Nachname"
+    },
+    "cats": {
+        "titles": {
+            "main": "Katzen",
+            "details": "Details"
+        },
+        "add": "Katze hinzufügen",
+        "edit": "Katze bearbeiten",
+        "delete": "Katze löschen",
+        "delete_warn_info": "Willst du diese Katze wirklich löschen?",
+        "name": "Name",
+        "age": "Alter",
+        "housebroken": "Hauskatze"
+    }
+}

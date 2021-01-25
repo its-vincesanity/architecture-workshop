@@ -4,8 +4,8 @@ import { UserProfileComponent } from './user-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [UserProfileComponent],
@@ -13,12 +13,12 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    TranslateModule,
 
     SharedModule,
 
     MatInputModule,
     MatButtonModule,
-    MatProgressSpinnerModule,
   ]
 })
 export class UserProfileModule { }

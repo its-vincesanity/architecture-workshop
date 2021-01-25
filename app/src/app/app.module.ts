@@ -7,8 +7,8 @@ import { APP_ROUTES } from './app.routes';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationModule } from './navigation/navigation.module';
-import { WelcomeModule } from './features/welcome/welcome.module';
 import { UserProfileModule } from './features/user-profile/user-profile.module';
+import { CatsModule } from './features/cats/cats.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { UserProfileModule } from './features/user-profile/user-profile.module';
     CoreModule,
 
     NavigationModule,
-    WelcomeModule,
+    CatsModule,
     UserProfileModule,
   ],
   providers: [],

@@ -18,5 +18,6 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     UserService,
     MatSnackBar,
   ],
+  exports: [CustomTranslationModule]
 })
 export class CoreModule { }

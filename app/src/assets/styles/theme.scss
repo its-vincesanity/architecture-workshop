@@ -18,7 +18,7 @@ $theme-primary: mat-palette($mat-teal);
 $theme-accent: mat-palette($mat-pink);
 
 // The warn palette is optional (defaults to red).
-$theme-warn: mat-palette($mat-red);
+$theme-warn: mat-palette($mat-deep-orange, 400);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -43,8 +43,19 @@ $light-theme: mat-light-theme((
 // that you are using.
 @include angular-material-theme($dark-theme);
 
+
+
 .light-theme {
-  @include angular-material-theme($light-theme);
+    @include angular-material-theme($light-theme);
+
+    .mat-table .mat-row:nth-child(even) {
+        background-color: rgba($color: #000, $alpha: .05);
+    }
+    .content {
+        a:hover, a:active, a:focus {
+            color: mat-color($theme-primary, 700);
+        }
+    }
 }
 
 $default-spacing: 16px;
@@ -52,7 +63,62 @@ $default-spacing: 16px;
 /* You can add global styles to this file, and also import other style files */
 
 body { font-family: Roboto, sans-serif; transition: background-color 2s;}
-.content { padding: $default-spacing;}
+.content { 
+    padding: $default-spacing;
 
-.content .mat-form-field,
-.content .mat-button-base { margin-right: $default-spacing;}
+    .mat-form-field,
+    .mat-button-base {
+        margin-right: $default-spacing;
+    }
+
+    .mat-toolbar {
+      .mat-button-base {
+        margin-right: 0;
+      }
+    }
+
+    .mat-card-header-text {
+      margin: 0;
+    }
+
+    .mat-icon-sm {
+      font-size: 14px;;
+    }
+
+    a {
+        color: mat-color($theme-primary, default);
+    }
+    a:hover, a:active, a:focus {
+        color: mat-color($theme-primary, 300);
+    }
+}
+
+.mat-dialog-content.content {
+  overflow: initial;
+}
+
+.mat-table {
+    width: 100%;
+    .mat-row:nth-child(even){
+        background-color: rgba($color: #fff, $alpha: .05);
+    }
+}
+
+.mat-cell-action {
+  text-align: right;
+}
+
+.spacing-bottom {
+  margin-bottom: $default-spacing;    
+}
+
+.spacing-top {
+  margin-top: $default-spacing;    
+}
+
+section.info-warn {
+  background-color: $black-12-opacity;
+  padding: $default-spacing;
+  border-radius: $default-spacing / 4;
+  color: mat-color($theme-warn);
+}

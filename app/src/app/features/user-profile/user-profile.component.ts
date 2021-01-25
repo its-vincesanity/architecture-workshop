@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NotificationService } from 'src/app/core/services/notification/notification.service';
-import { IUser } from 'src/app/core/services/user/user.interface';
 import { UserService } from 'src/app/core/services/user/user.service';
 import { deepCompare } from 'src/app/shared/helper/deep-compare';
 import { deepCopy } from 'src/app/shared/helper/deep-copy';
+import { IUser } from '../../../../../api/user/user.interface';
 import { USER_PROFILE } from './user-profile.constants';
 
 @Component({
@@ -12,6 +12,8 @@ import { USER_PROFILE } from './user-profile.constants';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
+
+  public MINIMUM_INPUT_LENGTH = USER_PROFILE.MINIMUM_INPUT_LENGTH;
 
   public loading: boolean;
   public error: boolean;
@@ -27,19 +29,19 @@ export class UserProfileComponent implements OnInit {
     private readonly notificationService: NotificationService,
   ) { }
 
-  public reset() {
+  public reset(): void{
     this.currentUser = deepCopy(this.initialUser);
     this.hasUserChanged = false;
   }
 
-  public validateForm() {
+  public validateForm(): void {
     this.hasUserChanged = !deepCompare(this.currentUser, this.initialUser);
-    this.isFormValid = 
-      this.currentUser.firstName.length >= USER_PROFILE.MINIMUM_INPUT_LENGTH &&
-      this.currentUser.lastName.length >= USER_PROFILE.MINIMUM_INPUT_LENGTH;
+    this.isFormValid =
+      this.currentUser.firstName.length >= this.MINIMUM_INPUT_LENGTH &&
+      this.currentUser.lastName.length >= this.MINIMUM_INPUT_LENGTH;
   }
 
-  public updateUser() {
+  public updateUser(): void {
     this.loading = true;
     this.userService.updateUser(this.currentUser).subscribe((response) => {
       this.currentUser = deepCopy(response);
@@ -51,12 +53,11 @@ export class UserProfileComponent implements OnInit {
       this.error = true;
       this.notificationService.notify('Could not save User');
     });
-    this.userService.updateUser(this.currentUser);
-    
+
     this.hasUserChanged = false;
   }
 
-  private setCurrentUser() {
+  private setCurrentUser(): void {
     this.loading = true;
     this.userService.getCurrentUser().subscribe(response => {
       this.currentUser = deepCopy(response);
