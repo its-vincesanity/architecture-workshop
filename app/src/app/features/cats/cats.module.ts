@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CatsComponent } from './cats.component';
 import { CatDetailsModule } from './cat-details/cat-details.module';
 import { CatsService } from './services/cats.service';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -24,7 +24,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   declarations: [
     CatsComponent,
     CatDeleteDialogComponent,
-    CatAddDialogComponent, CatUpdateDialogComponent
+    CatAddDialogComponent,
+    CatUpdateDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -49,4 +50,4 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   ],
   providers: [CatsService]
 })
-export class CatsModule { }
+export class CatsModule {}

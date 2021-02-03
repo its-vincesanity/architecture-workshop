@@ -3,6 +3,8 @@ import {
   Controller,
   Delete,
   Get,
+  HttpException,
+  HttpStatus,
   Param,
   Post,
   Put,
@@ -21,7 +23,14 @@ export class CatsController {
 
   @Get(':id')
   async getOne(@Param() param: { id: string }): Promise<ICat> {
-    return await this.catsService.getCat(param.id);
+    const cat = await this.catsService.getCat(param.id);
+    if (cat === undefined) {
+      throw new HttpException(
+        `Cat with id ${param.id} could not be found`,
+        HttpStatus.NOT_FOUND,
+      );
+    }
+    return cat;
   }
 
   @Put()

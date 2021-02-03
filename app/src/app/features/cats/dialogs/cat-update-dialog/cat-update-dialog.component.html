@@ -3,20 +3,20 @@
     <section>
         <mat-form-field appearance="outline">
             <mat-label>
-                {{'cats.name' | translate}}
+                {{'cats.details.name' | translate}}
             </mat-label>
-            <input matInput [placeholder]="'cats.name' | translate" [(ngModel)]="cat.name" cdkFocusInitial>
+            <input matInput [placeholder]="'cats.details.name' | translate" [(ngModel)]="cat.name" cdkFocusInitial>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>
-                {{'cats.age' | translate}}
+                {{'cats.details.age' | translate}}
             </mat-label>
-            <input matInput [placeholder]="'cats.age' | translate" type="number" min="1" max="20" [(ngModel)]="cat.age" (keyup)="validateAge()">
+            <input matInput [placeholder]="'cats.details.age' | translate" type="number" min="1" max="20" [(ngModel)]="cat.age" (keyup)="validateAge()">
         </mat-form-field>
     </section>
     <section>
         <mat-slide-toggle [(ngModel)]="cat.housebroken" labelPosition="before">
-            {{'cats.housebroken' | translate}}
+            {{'cats.details.housebroken' | translate}}
         </mat-slide-toggle>
     </section>
 </mat-dialog-content>

@@ -34,7 +34,8 @@ export class CatAddDialogComponent implements OnInit {
       name: '',
       age: 1,
       housebroken: true,
-      profilePictureUrl: null
+      profilePictureUrl: null,
+      activityData: null
     };
   }
 

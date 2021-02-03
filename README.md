@@ -7,8 +7,10 @@ This workshop should provide an easy overview how to create an enterprise angula
 - [App Module](./app/src/app/README.md)
 - [Navigation Module](./app/src/app/navigation/README.md)
 - [Core Module](./app/src/app/core/README.md)
+- [Shared Module](./app/src/app/shared/README.md)
 - [Features](./app/src/app/features/README.md)
   - [User Profile](./app/src/app/features/user-profile/README.md)
+  - [Cats](./app/src/app/features/cats/README.md)
 
 # Run Demo
 

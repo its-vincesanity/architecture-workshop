@@ -27,8 +27,17 @@
         "edit": "Katze bearbeiten",
         "delete": "Katze löschen",
         "delete_warn_info": "Willst du diese Katze wirklich löschen?",
-        "name": "Name",
-        "age": "Alter",
-        "housebroken": "Hauskatze"
+        "details": {
+            "name": "Name",
+            "age": "Alter",
+            "housebroken": "Hauskatze",
+            "activity": "Aktivität",
+            "chart": {
+                "playtime": "Spielzeit",
+                "feedingTime": "Fütterungszeit",
+                "sleepingTime": "Schlafenszeit"
+            }
+        }
+        
     }
 }

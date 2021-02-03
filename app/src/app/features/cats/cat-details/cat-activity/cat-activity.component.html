@@ -1,0 +1,12 @@
+
+<google-chart
+    style="width: 100%;"
+    *ngIf="activityData"
+    [dynamicResize]="dynamicResize"
+    [options]="options"
+    [type]="type"
+    [data]="data"
+    [columns]="columns">
+</google-chart>
+
+<app-something-went-wrong *ngIf="!activityData"></app-something-went-wrong>

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { catsMock } from '../cats.mock';
+import { catsMock, createActivityData } from '../cats.mock';
 import { delay } from '../../../config/config.json';
 import { ICat } from '../../../../api/cats/cat.interface';
 
@@ -26,6 +26,9 @@ export class CatsService {
   public async addCat(cat: ICat): Promise<ICat> {
     return new Promise((resolve) => {
       setTimeout(() => {
+        if (cat.activityData === null) {
+          cat.activityData = createActivityData();
+        }
         this.cats.push(cat);
         resolve(cat);
       }, delay);
