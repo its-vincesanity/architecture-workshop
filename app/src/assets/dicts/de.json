@@ -30,8 +30,9 @@
         "details": {
             "name": "Name",
             "age": "Alter",
-            "housebroken": "Hauskatze",
+            "housebroken": "Stubenrein",
             "activity": "Aktivität",
+            "no_activity_data": "Keine Aktivitätsdaten vorhanden",
             "chart": {
                 "playtime": "Spielzeit",
                 "feedingTime": "Fütterungszeit",

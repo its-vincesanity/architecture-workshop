@@ -1,9 +1,9 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, ElementRef, Inject, OnInit } from '@angular/core';
-import { APP_CONFIG } from 'src/app/app.config';
-import { UserService } from 'src/app/core/services/user/user.service';
+import { Component, OnInit } from '@angular/core';
+import { APP_CONFIG } from '../../../app/app.config';
+import { UserService } from '../../../app/core/services/user/user.service';
 import { IUser } from '../../../../../api/user/user.interface';
-import { HEADER_CONSTANTS } from './header.constants';
+import { TTheme } from '../../core/services/theme/theme.type';
+import { ThemeService } from '../../core/services/theme/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -13,34 +13,21 @@ import { HEADER_CONSTANTS } from './header.constants';
 export class HeaderComponent implements OnInit {
 
   constructor(
-    @Inject(DOCUMENT) private readonly document: Document,
     private readonly userService: UserService,
+    private readonly themeService: ThemeService,
     ) {}
 
   public title: string;
   public version: string;
-  public mode: string;
+  public theme: TTheme;
 
   public user: IUser;
 
-  public readonly lightMode = HEADER_CONSTANTS.LIGHT_MODE;
-  public readonly darkMode = HEADER_CONSTANTS.DARK_MODE;
+  public readonly lightTheme: TTheme = 'light';
+  public readonly darkTheme: TTheme = 'dark';
 
-  public changeTheme(isLightDesign: boolean): void {
-    switch (isLightDesign) {
-      case true:
-        this.mode = HEADER_CONSTANTS.LIGHT_MODE;
-        this.document.body.classList.add('light-theme');
-        break;
-      case false:
-        this.mode = HEADER_CONSTANTS.DARK_MODE;
-        this.document.body.classList.remove('light-theme');
-        break;
-      default:
-        this.mode = HEADER_CONSTANTS.DARK_MODE;
-        this.document.body.classList.remove('light-theme');
-    }
-
+  public toggleTheme(): void {
+    this.themeService.toggleTheme();
   }
 
   private setCurrentUser(): void {
@@ -52,12 +39,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.title = APP_CONFIG.title;
     this.version = APP_CONFIG.version;
-    this.mode = HEADER_CONSTANTS.DARK_MODE;
+    this.theme = this.themeService.getCurrentTheme();
 
     this.setCurrentUser();
 
     this.userService.$update.subscribe((user: IUser) => {
       this.user = user;
+    });
+    this.themeService.$change.subscribe((theme: TTheme) => {
+      this.theme = theme;
     });
   }
 

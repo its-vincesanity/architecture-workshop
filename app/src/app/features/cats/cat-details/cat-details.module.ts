@@ -8,7 +8,6 @@ import {MatCardModule} from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { TranslateModule } from '@ngx-translate/core';
 import { CatActivityModule } from './cat-activity/cat-activity.module';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { CatActivityModule } from './cat-activity/cat-activity.module';
   imports: [
     CommonModule,
     RouterModule,
-    TranslateModule,
 
     SharedModule,
     CatActivityModule,

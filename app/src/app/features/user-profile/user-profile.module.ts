@@ -4,8 +4,7 @@ import { UserProfileComponent } from './user-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { SharedModule } from 'src/app/shared/shared.module';
-import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../../../app/shared/shared.module';
 
 @NgModule({
   declarations: [UserProfileComponent],
@@ -13,7 +12,6 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    TranslateModule,
 
     SharedModule,
 

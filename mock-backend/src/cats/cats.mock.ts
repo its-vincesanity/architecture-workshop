@@ -44,7 +44,7 @@ export const catsMock: ICat[] = [
   {
     id: crypto.randomBytes(16).toString('hex'),
     name: 'Ben Bengali',
-    housebroken: false,
+    housebroken: true,
     age: 3,
     profilePictureUrl: 'http://placekitten.com/g/300/300',
     activityData: createActivityData(),

@@ -17,7 +17,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CatUpdateDialogComponent } from './dialogs/cat-update-dialog/cat-update-dialog.component';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { TranslateModule } from '@ngx-translate/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
@@ -32,7 +31,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    TranslateModule,
 
     CatDetailsModule,
 

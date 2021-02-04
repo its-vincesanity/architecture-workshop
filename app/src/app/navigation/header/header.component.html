@@ -13,8 +13,8 @@
         [src]="user.profilePictureUrl"
       >
     </a>
-    <mat-slide-toggle labelPosition="before" [ngSwitch]="mode" (change)="changeTheme($event.checked)">
-        <mat-icon *ngSwitchCase="lightMode">wb_sunny</mat-icon>
-        <mat-icon *ngSwitchCase="darkMode">nights_stay</mat-icon>
+    <mat-slide-toggle labelPosition="before" [ngSwitch]="theme" (change)="toggleTheme()">
+        <mat-icon *ngSwitchCase="lightTheme">wb_sunny</mat-icon>
+        <mat-icon *ngSwitchCase="darkTheme">nights_stay</mat-icon>
       </mat-slide-toggle>
 </mat-toolbar>
