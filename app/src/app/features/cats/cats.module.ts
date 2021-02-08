@@ -43,6 +43,11 @@ import { TranslateModule } from '@ngx-translate/core';
 
         SharedModule,
 
+        FormsModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatSlideToggleModule,
+
         MatInputModule,
         MatTableModule,
         MatIconModule,

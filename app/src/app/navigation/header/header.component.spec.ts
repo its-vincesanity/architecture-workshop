@@ -1,6 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterTestingModule } from '@angular/router/testing';
 import { HeaderComponent } from './header.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { UserService } from '../../core/services/user/user.service';
+import { UserServiceStub } from '../../stubs/user.service.stub';
 
 describe('HeaderComponent', () => {
     let component: HeaderComponent;
@@ -8,7 +15,19 @@ describe('HeaderComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-        declarations: [ HeaderComponent ]
+            imports: [
+                RouterTestingModule,
+                HttpClientTestingModule,
+
+                MatToolbarModule,
+                MatSlideToggleModule,
+                MatButtonModule,
+                MatIconModule,
+            ],
+            declarations: [ HeaderComponent ],
+            providers: [
+                { provide: UserService, useValue: UserServiceStub },
+            ]
         })
         .compileComponents();
     });

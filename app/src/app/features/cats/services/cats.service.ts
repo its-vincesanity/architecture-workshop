@@ -5,7 +5,7 @@ import { APP_CONFIG } from '../../../app.config';
 import { ICat } from '../../../../../../api/cats/cat.interface';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class CatsService {
 

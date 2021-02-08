@@ -4,15 +4,15 @@ import { UserService } from '../services/user.service';
 
 @Controller('user')
 export class UserController {
-  constructor(private userService: UserService) {}
+    constructor(private userService: UserService) {}
 
-  @Get()
-  async getOne(): Promise<IUser> {
-    return await this.userService.getUser();
-  }
+    @Get()
+    async getOne(): Promise<IUser> {
+        return await this.userService.getUser();
+    }
 
-  @Post()
-  async update(@Body() user: IUser): Promise<IUser> {
-    return await this.userService.updateUser(user);
-  }
+    @Post()
+    async update(@Body() user: IUser): Promise<IUser> {
+        return await this.userService.updateUser(user);
+    }
 }

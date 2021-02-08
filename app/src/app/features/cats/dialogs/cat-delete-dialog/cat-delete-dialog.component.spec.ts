@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateServiceStub } from '../../../../stubs/translate.service.stub';
 
 import { CatDeleteDialogComponent } from './cat-delete-dialog.component';
 
@@ -8,7 +11,16 @@ describe('CatDeleteDialogComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-        declarations: [ CatDeleteDialogComponent ]
+            imports: [
+                TranslateModule,
+                MatDialogModule,
+            ],
+            declarations: [ CatDeleteDialogComponent ],
+            providers: [
+                { provide: TranslateService, useValue: TranslateServiceStub },
+                { provide: MatDialogRef, useValue: {} },
+                { provide: MAT_DIALOG_DATA, useValue: {} },
+            ]
         })
         .compileComponents();
     });

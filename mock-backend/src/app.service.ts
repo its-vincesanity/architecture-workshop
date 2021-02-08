@@ -3,7 +3,7 @@ import { name, version } from '../package.json';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return `${name} - ${version}`;
-  }
+    getHello(): string {
+        return `${name} - ${version}`;
+    }
 }

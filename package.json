@@ -8,7 +8,8 @@
         "set-version": "npm version $VERSION && cd ./mock-backend && npm version $VERSION && cd ../app && npm version $VERSION"
     },
     "devDependencies": {
-        "start-server-webpack-plugin": "^2.2.5",
-        "webpack-node-externals": "^2.5.2"
+        "@types/jest": "26.0.20",
+        "start-server-webpack-plugin": "2.2.5",
+        "webpack-node-externals": "2.5.2"
     }
 }

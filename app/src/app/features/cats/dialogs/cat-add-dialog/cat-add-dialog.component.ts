@@ -11,7 +11,7 @@ import { ICat } from '../../../../../../../api/cats/cat.interface';
 export class CatAddDialogComponent {
 
     public newCat: ICat = {
-        id: crypto.getRandomValues(new Uint32Array(1))[0].toString(),
+        id: Math.random().toString(36).substr(2, 9),
         name: '',
         age: 1,
         housebroken: true,

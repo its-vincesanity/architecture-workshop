@@ -32,6 +32,7 @@
     ],
     "exclude": [
         "node_modules/**/*.ts",
+        "src/**/*.stub.ts",
     ],
     "angularCompilerOptions": {
         "enableIvy": false,
