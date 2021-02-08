@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-something-went-wrong',
-  templateUrl: './something-went-wrong.component.html'
+    selector: 'app-something-went-wrong',
+    templateUrl: './something-went-wrong.component.html'
 })
 export class SomethingWentWrongComponent {}

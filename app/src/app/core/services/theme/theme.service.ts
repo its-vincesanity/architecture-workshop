@@ -4,7 +4,7 @@ import { Subject } from 'rxjs';
 import { TTheme } from './theme.type';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ThemeService {
 
@@ -15,7 +15,7 @@ export class ThemeService {
     constructor(@Inject(DOCUMENT) private readonly document: Document) {}
 
     public getCurrentTheme(): TTheme {
-      return this.theme;
+        return this.theme;
     }
 
     public toggleTheme(): void {

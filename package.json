@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "scripts": {
         "init": "cd ./mock-backend && npm i && cd ../app && npm i",
-        "start:app": "cd app && npm run start",
-        "start:backend": "cd mock-backend && npm run start",
+        "app": "cd app && npm run start",
+        "backend": "cd mock-backend && npm run start",
         "set-version": "npm version $VERSION && cd ./mock-backend && npm version $VERSION && cd ../app && npm version $VERSION"
     },
     "devDependencies": {

@@ -21,12 +21,12 @@ $ npm run init
 
 ## Run App
 ```bash
-$ npm run start:app
+$ npm run app
 ```
 
 ## Run Mock Backend
 ```bash
-$ npm run start:backend
+$ npm run backend
 ```
 
 ## Set Version

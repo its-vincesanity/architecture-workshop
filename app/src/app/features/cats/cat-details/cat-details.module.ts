@@ -9,21 +9,23 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CatActivityModule } from './cat-activity/cat-activity.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-  declarations: [CatDetailsComponent],
-  imports: [
-    CommonModule,
-    RouterModule,
+    declarations: [CatDetailsComponent],
+    imports: [
+        CommonModule,
+        RouterModule,
+        TranslateModule,
 
-    SharedModule,
-    CatActivityModule,
+        SharedModule,
+        CatActivityModule,
 
-    MatCardModule,
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-  ],
-  providers: [CatsService]
+        MatCardModule,
+        MatIconModule,
+        MatButtonModule,
+        MatToolbarModule,
+    ],
+    providers: [CatsService]
 })
 export class CatDetailsModule { }

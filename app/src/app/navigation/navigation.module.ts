@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HeaderModule } from './header/header.module';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    HeaderModule
-  ],
-  exports: [HeaderModule]
+    declarations: [],
+    imports: [
+        CommonModule,
+        HeaderModule
+    ],
+    exports: [HeaderModule]
 })
 export class NavigationModule { }

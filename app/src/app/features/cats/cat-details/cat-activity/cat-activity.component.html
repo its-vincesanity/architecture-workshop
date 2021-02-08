@@ -1,7 +1,7 @@
 
 <google-chart
     style="width: 100%;"
-    *ngIf="activityData"
+    *ngIf="!noData"
     (ready)="onReady()"
     (error)="onError()"
     [dynamicResize]="dynamicResize"
@@ -13,9 +13,9 @@
 
 <app-something-went-wrong *ngIf="!loading && error"></app-something-went-wrong>
 
-<p *ngIf="!loading && !error && noData">
+<section class="alert alert-info" *ngIf="!loading && !error && noData">
     {{'cats.details.no_activity_data' | translate}}
-</p>
+</section>
 
 <app-loading *ngIf="loading"></app-loading>
 

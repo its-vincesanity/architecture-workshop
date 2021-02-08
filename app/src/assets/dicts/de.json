@@ -3,11 +3,36 @@
         "add": "Hinzufügen",
         "save": "Speichern",
         "cancel": "Abbrechen",
+        "close": "Schließen",
         "edit": "Bearbeiten",
         "delete": "Löschen",
         "back": "Zurück",
         "reset": "Zurücksetzen",
+        "no_data_found": "Es wurden keine Daten gefunden…",
         "something_went_wrong": "Irgendetwas ist schiefgegangen. Bitte versuchen Sie es später noch ein mal."
+    },
+    "actions": {
+        "get_all": {
+            "error": "Es konnten keine {{item}} gefunden werden"
+        },
+        "get_one": {
+            "error": "Es konnte keine {{item}} gefunden werden"
+        },
+        "get_id": {
+            "error": "Die ID der {{item}} is unbekannt"
+        },
+        "add": {
+            "success": "{{item}} wurde erfolgreich hinzugefügt",
+            "error": "{{item}} konnte nicht hinzugefügt werden"
+        },
+        "update": {
+            "success": "{{item}} wurde erfolgreich geupdatet",
+            "error": "{{item}} konnte nicht geupdatet werden"
+        },
+        "delete": {
+            "success": "{{item}} wurde erfolgreich gelöscht",
+            "error": "{{item}} konnte nicht gelöscht werden"
+        }
     },
     "units": {
         "year": "Jahr",
@@ -19,6 +44,8 @@
         "last_name": "Nachname"
     },
     "cats": {
+        "one": "Katze",
+        "all": "Katzen",
         "titles": {
             "main": "Katzen",
             "details": "Details"

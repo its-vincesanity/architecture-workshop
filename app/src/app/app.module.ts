@@ -11,20 +11,20 @@ import { UserProfileModule } from './features/user-profile/user-profile.module';
 import { CatsModule } from './features/cats/cats.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot(APP_ROUTES),
-    CoreModule,
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot(APP_ROUTES),
+        CoreModule,
 
-    NavigationModule,
-    CatsModule,
-    UserProfileModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+        NavigationModule,
+        CatsModule,
+        UserProfileModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

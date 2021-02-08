@@ -18,34 +18,41 @@ import { CatUpdateDialogComponent } from './dialogs/cat-update-dialog/cat-update
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-  declarations: [
-    CatsComponent,
-    CatDeleteDialogComponent,
-    CatAddDialogComponent,
-    CatUpdateDialogComponent,
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
+    declarations: [
+        CatsComponent,
+        CatDeleteDialogComponent,
+        CatAddDialogComponent,
+        CatUpdateDialogComponent,
+    ],
+    entryComponents: [
+        CatDeleteDialogComponent,
+        CatAddDialogComponent,
+        CatUpdateDialogComponent,
+    ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule,
+        TranslateModule,
 
-    CatDetailsModule,
+        CatDetailsModule,
 
-    SharedModule,
+        SharedModule,
 
-    MatInputModule,
-    MatTableModule,
-    MatIconModule,
-    MatBadgeModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatSlideToggleModule,
-    MatToolbarModule,
-    MatTooltipModule,
-  ],
-  providers: [CatsService]
+        MatInputModule,
+        MatTableModule,
+        MatIconModule,
+        MatBadgeModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatSlideToggleModule,
+        MatToolbarModule,
+        MatTooltipModule,
+    ],
+    providers: [CatsService]
 })
 export class CatsModule {}

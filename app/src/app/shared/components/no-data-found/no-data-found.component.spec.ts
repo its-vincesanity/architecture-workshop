@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CatsComponent } from './cats.component';
+import { NoDataFoundComponent } from './no-data-found.component';
 
-describe('CatsComponent', () => {
-    let component: CatsComponent;
-    let fixture: ComponentFixture<CatsComponent>;
+describe('NoDataFoundComponent', () => {
+    let component: NoDataFoundComponent;
+    let fixture: ComponentFixture<NoDataFoundComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-        declarations: [ CatsComponent ]
+        declarations: [ NoDataFoundComponent ]
         })
         .compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(CatsComponent);
+        fixture = TestBed.createComponent(NoDataFoundComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

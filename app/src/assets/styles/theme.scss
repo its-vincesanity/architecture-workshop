@@ -46,7 +46,7 @@ $light-theme: mat-light-theme((
 
 
 .light-theme {
-    @include angular-material-theme($light-theme);
+    @include angular-material-color($light-theme);
 
     .mat-table .mat-row:nth-child(even) {
         background-color: rgba($color: #000, $alpha: .05);
@@ -72,17 +72,17 @@ body { font-family: Roboto, sans-serif; transition: background-color 2s;}
     }
 
     .mat-toolbar {
-      .mat-button-base {
-        margin-right: 0;
-      }
+        .mat-button-base {
+            margin-right: 0;
+        }
     }
 
     .mat-card-header-text {
-      margin: 0;
+        margin: 0;
     }
 
     .mat-icon-sm {
-      font-size: 14px;;
+        font-size: 14px;;
     }
 
     a {
@@ -94,7 +94,7 @@ body { font-family: Roboto, sans-serif; transition: background-color 2s;}
 }
 
 .mat-dialog-content.content {
-  overflow: initial;
+    overflow: initial;
 }
 
 .mat-table {
@@ -105,20 +105,22 @@ body { font-family: Roboto, sans-serif; transition: background-color 2s;}
 }
 
 .mat-cell-action {
-  text-align: right;
+    text-align: right;
 }
 
 .spacing-bottom {
-  margin-bottom: $default-spacing;    
+    margin-bottom: $default-spacing;    
 }
 
 .spacing-top {
-  margin-top: $default-spacing;    
+    margin-top: $default-spacing;    
 }
 
-section.info-warn {
-  background-color: $black-12-opacity;
-  padding: $default-spacing;
-  border-radius: $default-spacing / 4;
-  color: mat-color($theme-warn);
+.alert {
+    background-color: $black-12-opacity;
+    padding: $default-spacing;
+    border-radius: $default-spacing / 4;
+    &.alert-warn {
+        color: mat-color($theme-warn);
+    }
 }

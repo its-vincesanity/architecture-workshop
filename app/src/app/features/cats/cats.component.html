@@ -10,11 +10,11 @@
     </button>
 </mat-toolbar>
 
-<app-something-went-wrong *ngIf="!loading && error"></app-something-went-wrong>
-
 <app-loading *ngIf="loading"></app-loading>
+<app-something-went-wrong *ngIf="!loading && error"></app-something-went-wrong>
+<app-no-data-found *ngIf="!loading && !error && noData"></app-no-data-found>
 
-<table *ngIf="!loading && !error" mat-table [dataSource]="tabelData">
+<table *ngIf="!loading && !error && !noData" mat-table [dataSource]="tabelData">
     <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: tableColumns;"></tr>
 
