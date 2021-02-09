@@ -12,7 +12,7 @@ This Blueprint should provide an easy overview how to create an enterprise angul
 - [Changelog](./CHANGELOG.md)
 
 # Flow Chart
-![Flow CHart Image](./assets/Architecture%20-%20Flow%20Chart.png)
+![Flow CHart Image](./assets/architecture-flow-chart.png)
 
 # Run Demo
 
