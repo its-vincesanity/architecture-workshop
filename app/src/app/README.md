@@ -15,4 +15,4 @@ To load json configs at compile time set `"resolveJsonModule": true,` in the [ts
 # App Routing
 The App Module injects not only the Feature Modules it also global App Routing.
 
-[See an example](./app.app.routes.ts)
+[See an example](./app.routes.ts)
