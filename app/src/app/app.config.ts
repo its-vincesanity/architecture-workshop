@@ -1,4 +1,4 @@
-import { IAppConfig } from './shared/interfaces/app-config.interface';
+import { IAppConfig } from './core/interfaces/app-config.interface';
 import { name, version } from '../../package.json';
 import { backend, notificationTime } from '../config/config.json';
 import { TitlePipe } from './shared/pipes/title.pipe';
