@@ -11,6 +11,9 @@ This Blueprint should provide an easy overview how to create an enterprise angul
   - [Cats (Module with submodules example)](./app/src/app/features/cats)
 - [Changelog](./CHANGELOG.md)
 
+# Flow Chart
+![Flow CHart Image](./assets/Architecture%20-%20Flow%20Chart.png)
+
 # Run Demo
 
 ## Init
