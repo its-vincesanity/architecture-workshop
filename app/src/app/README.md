@@ -1,7 +1,7 @@
 # App Module
 
 This Module contains:
-- [Core Module](./cor)
+- [Core Module](./core)
 - [Navigation Module](./navigation)
 - [Feature Modules](#feature-modules)
 - [Global App Routing](#app-routing)
