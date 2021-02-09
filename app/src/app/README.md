@@ -12,9 +12,9 @@ To load json configs at compile time set `"resolveJsonModule": true,` in the [ts
 [See an example](./app.config.ts)
 
 # Feature Modules
-These modules contains use case or feature specific code.
-See: 
-    - ...
+These modules contains use case or feature specific code, like
+  - [User Profile (Simple module example)](./features/user-profile/README.md)
+  - [Cats (Module with submodules example)](./features/cats/README.md)
 
 # App Routing
 The App Module injects not only the Feature Modules it also global App Routing.

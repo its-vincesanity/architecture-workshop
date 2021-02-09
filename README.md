@@ -1,6 +1,5 @@
-# Architecture Workshop
-
-This workshop should provide an easy overview how to create an enterprise angular architecture. It's highly orientated on [Angular coding style guide](https://angular.io/guide/styleguide) and principles like [LIFT](https://johnpapa.net/angular-app-structuring-guidelines/) that have proven since AngularJS.
+# Architecture Workshop Blueprint
+This Blueprint should provide an easy overview how to create an enterprise angular architecture. It's highly orientated on [Angular coding style guide](https://angular.io/guide/styleguide) and principles like [LIFT](https://johnpapa.net/angular-app-structuring-guidelines/) that have proven since AngularJS.
 
 # Content
 - [Changelog](./CHANGELOG.md)
@@ -9,8 +8,8 @@ This workshop should provide an easy overview how to create an enterprise angula
 - [Core Module](./app/src/app/core/README.md)
 - [Shared Module](./app/src/app/shared/README.md)
 - [Features](./app/src/app/features/README.md)
-  - [User Profile](./app/src/app/features/user-profile/README.md)
-  - [Cats](./app/src/app/features/cats/README.md)
+  - [User Profile (Simple module example)](./app/src/app/features/user-profile/README.md)
+  - [Cats (Module with submodules example)](./app/src/app/features/cats/README.md)
 
 # Run Demo
 

@@ -31,7 +31,7 @@
     },
     "devDependencies": {
         "@angular-devkit/build-angular": "0.1002.0",
-        "@angular/cli": "^10.2.1",
+        "@angular/cli": "10.2.1",
         "@angular/compiler-cli": "10.2.0",
         "@ngx-translate/core": "13.0.0",
         "@ngx-translate/http-loader": "6.0.0",
