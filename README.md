@@ -2,7 +2,6 @@
 This Blueprint should provide an easy overview how to create an enterprise angular architecture. It's highly orientated on [Angular coding style guide](https://angular.io/guide/styleguide) and principles like [LIFT](https://johnpapa.net/angular-app-structuring-guidelines/) that have proven since AngularJS.
 
 # Content
-- [Changelog](./CHANGELOG.md)
 - [App Module](./app/src/app)
 - [Navigation Module](./app/src/app/navigatio)
 - [Core Module](./app/src/app/core)
@@ -10,6 +9,7 @@ This Blueprint should provide an easy overview how to create an enterprise angul
 - [Features](./app/src/app/features)
   - [User Profile (Simple module example)](./app/src/app/features/user-profile)
   - [Cats (Module with submodules example)](./app/src/app/features/cats)
+- [Changelog](./CHANGELOG.md)
 
 # Run Demo
 
