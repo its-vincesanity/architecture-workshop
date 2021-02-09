@@ -3,13 +3,13 @@ This Blueprint should provide an easy overview how to create an enterprise angul
 
 # Content
 - [Changelog](./CHANGELOG.md)
-- [App Module](./app/src/app/README.md)
-- [Navigation Module](./app/src/app/navigation/README.md)
-- [Core Module](./app/src/app/core/README.md)
-- [Shared Module](./app/src/app/shared/README.md)
-- [Features](./app/src/app/features/README.md)
-  - [User Profile (Simple module example)](./app/src/app/features/user-profile/README.md)
-  - [Cats (Module with submodules example)](./app/src/app/features/cats/README.md)
+- [App Module](./app/src/app)
+- [Navigation Module](./app/src/app/navigatio)
+- [Core Module](./app/src/app/core)
+- [Shared Module](./app/src/app/shared)
+- [Features](./app/src/app/features)
+  - [User Profile (Simple module example)](./app/src/app/features/user-profile)
+  - [Cats (Module with submodules example)](./app/src/app/features/cats)
 
 # Run Demo
 
