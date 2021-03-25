@@ -4,6 +4,6 @@
 - [angular.io](https://angular.io/guide/sharing-ngmodules)
 
 # Shared Components Exmaples
- - [loading](./loading)
- - [something-went-wrong](./something-went-wrong)
- - [no-data-found](./no-data-found)
+ - [loading](./components/loading)
+ - [something-went-wrong](./components/something-went-wrong)
+ - [no-data-found](./components/no-data-found)
