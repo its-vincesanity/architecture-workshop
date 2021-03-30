@@ -3,7 +3,7 @@ This Blueprint should provide an easy overview how to create an enterprise angul
 
 # Content
 - [App Module](./app/src/app)
-- [Navigation Module](./app/src/app/navigatio)
+- [Navigation Module](./app/src/app/navigation)
 - [Core Module](./app/src/app/core)
 - [Shared Module](./app/src/app/shared)
 - [Features](./app/src/app/features)
